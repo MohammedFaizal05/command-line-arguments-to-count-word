@@ -1,44 +1,58 @@
-# Word-count
+# command-line-arguments-to-count-word
+
 ## AIM:
 
-To write a python program for getting the word count from a text.
-## EQUIPEMENT'S REQUIRED:
+To write a python program for getting the word count from the contents of a file using command line arguments.
 
-PC Anaconda - Python 3.7
-ALGORITHM:
-## Step 1:
+## Equipments Required:
+1. Hardware – PCs
+2. Anaconda – Python 3.7 Installation / Moodle-Code Runner
 
-Open the file in read mode and handle it in text mode.
-## Step 2:
+## ALGORITHM: 
 
-Read the text using read() function.
-## Step 3:
+### Step 1: 
 
-Split the text using space separator. We assume that words in a sentence are separated by a space character.
-## Step 4:
+Import the sys module
 
-The length of the split list should equal the number of words in the text file.
-## Step 5:
+### Step 2: 
 
-You can refine the count by cleaning the string prior to splitting or validating the words after splitting.
-## Step 6:
+Pass the filename as the first argument after the name of script. Open the file as sys.argv[1]
+ 
+### Step 3: 
 
-Finally,print the number of words and display the output.
+Read the file using read() method.
+
+### Step 4:  
+
+Use split() method to split the file content into words.
+
+### Step 5: 
+
+Use len() to find the total words.
+
+### Step 6: 
+
+Run the program to determine the number of words in the file created.
+
 ## PROGRAM:
 ```python
-Program to find the gcd of a number using function.
-Developed by: Mohammed Faizal.J
+Python program for getting the word count from the contents of a file using command line arguments.
+Developed by:Mohammed Faizal.J
 RegisterNumber: 22003412
-num_words = 0
-with open ('myfile.txt','r') as file1:
-    for i in file1:
-        word = i.split()
-        num_words +=len(word)
-print("Number of words ={}".format(num_words))
+
+import sys
+count = 0
+with open (sys.argv[1],'r') as f1:
+    for line in f1:
+        word = line.split()
+        count += len (word)
+print("word count in file = ",count)
+
 ```
 ### OUTPUT:
-![c](https://user-images.githubusercontent.com/120553195/214851804-7715ffb0-f168-4390-8906-169ad47b9a46.png)
-![w](https://user-images.githubusercontent.com/120553195/214852024-3f5d6c5d-5e12-4b80-8571-88e529d5322d.png)
+![comma](https://user-images.githubusercontent.com/120553195/214853086-c7c16ab7-8efe-4b4e-b151-f0f487f84a31.png)
+![nd](https://user-images.githubusercontent.com/120553195/214853117-e07ba12c-ccbd-4383-822b-7f309869b434.png)
+
 
 
 
